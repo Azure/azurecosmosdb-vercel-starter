@@ -1,0 +1,25 @@
+{
+  "name": "azurecosmosdb-vercel-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@azure/cosmos": "^3.17.3",
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.0",
+    "@chakra-ui/theme": "^3.1.0",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.1.4",
+    "gray-matter": "^4.0.3",
+    "next": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "remark": "^14.0.2",
+    "remark-html": "^15.0.1",
+    "uuid": "^9.0.0"
+  }
+}
