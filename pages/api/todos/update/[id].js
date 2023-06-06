@@ -1,5 +1,6 @@
 // api/updateTodo.js
 import { container } from "../../../../lib/cosmos";
+import { clean } from "../../../../lib/utils";
 
 export default async function handle(req, res) {
     console.log(`atleast updating.`);
@@ -14,7 +15,7 @@ export default async function handle(req, res) {
       return;
     }
 
-    await container.item(id, id).replace(updatedTodo);
+    await container.item(id, id).replace(clean(updatedTodo));
     res.status(200).json(updatedTodo);
   } else {
     res.status(405).end(); // Method Not Allowed
