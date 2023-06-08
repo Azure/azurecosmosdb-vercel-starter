@@ -80,7 +80,9 @@ export default function Home() {
 
   return (
     <Box>
-      <Heading mt={8} textAlign="center">Todo App.</Heading>
+      <Heading mt={8} textAlign="center">
+        Azure Cosmos DB Starter – ToDo App
+      </Heading>
       <VStack mt={4} spacing={4} mx="auto" maxW="md">
         <Input
           value={inputValue}
@@ -88,26 +90,27 @@ export default function Home() {
           placeholder="Add a new task"
           onKeyDown={(e) => e.key === "Enter" && handleCreate()}
         />
-        <Button onClick={handleCreate} colorScheme="blue">Add Todo</Button>
+        <Button onClick={handleCreate} colorScheme="blue">
+          Add Todo
+        </Button>
         {todos.map((todo) => (
           <HStack key={todo.id} w="100%">
             <Checkbox
               isChecked={todo.completed}
               onChange={(e) => handleUpdate(todo.id, e.target.checked)}
-                >
-                  {todo.title}
-                </Checkbox>
-                <Spacer />
-                <IconButton
-                  aria-label="Delete todo"
-                  icon={<DeleteIcon />}
-                  onClick={() => handleDelete(todo.id)}
-                  colorScheme="red"
-                />
-              </HStack>
-            ))}
-          </VStack>
-        </Box>
-      );
-    }
-    
+            >
+              {todo.title}
+            </Checkbox>
+            <Spacer />
+            <IconButton
+              aria-label="Delete todo"
+              icon={<DeleteIcon />}
+              onClick={() => handleDelete(todo.id)}
+              colorScheme="red"
+            />
+          </HStack>
+        ))}
+      </VStack>
+    </Box>
+  );
+}
