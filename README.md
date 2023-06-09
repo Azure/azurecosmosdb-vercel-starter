@@ -10,19 +10,17 @@ Azure [Cosmos DB account](https://aka.ms/trycosmosdbvercel), database and contai
 
 ### Steps
 
-1. Install dependencies from the root folder - `npm install`
+- Install dependencies from the root folder - `npm install`
 
-2. Rename sample.env to .env and set appropriate variables.
+- Rename sample.env to .env and set appropriate variables.
 
-   - COSMOSDB_CONNECTION_STRING : This is the connection string for Azure Cosmos DB.
-   - COSMOSDB_DATABASE_NAME : This is the name of the database to store todos.
-   - COSMOSDB_CONTAINER_NAME : This is the name of the container to store todos.
+  - COSMOSDB_CONNECTION_STRING : This is the connection string for Azure Cosmos DB.
+  - COSMOSDB_DATABASE_NAME : This is the name of the database to store todos.
+  - COSMOSDB_CONTAINER_NAME : This is the name of the container to store todos.
 
-You can obtain the connection string by navigating to your Azure Cosmos DB account page's key blade, and select Primary connection string. Copy the value to use in the Data API Builder.
+You can obtain the connection string by navigating to your Azure Cosmos DB account page's key blade, and select Primary connection string. Copy the value to use.
 
-![Cosmos DB connection string](./public/images/cosmos-connection.png)
-
-3. Start the project - `npm run dev`
+- Start the project - `npm run dev`
 
 ## Demo
 
