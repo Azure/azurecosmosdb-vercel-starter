@@ -1,10 +1,12 @@
 // api/updateTodo.js
-import { container } from "../../../../lib/cosmos";
+import cosmosSingleton from "../../../../lib/cosmos";
 import { clean } from "../../../../lib/utils";
 
 export default async function handle(req, res) {
-    console.log(`atleast updating.`);
+  console.log(`atleast updating.`);
   if (req.method === "PUT") {
+    await cosmosSingleton.initialize();
+    const container = cosmosSingleton.getContainer();
     const { id } = req.query;
     const updatedTodo = req.body;
 
