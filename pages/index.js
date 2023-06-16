@@ -81,11 +81,7 @@ export default function Home() {
   return (
     <Box>
       <Heading mt={8} textAlign="center">
-        <h1>
-          Azure Cosmos DB Starter <br /> ToDo App
-        </h1>
-        <span> </span>
-        <span> </span>
+        Azure Cosmos DB Starter – Todo App
       </Heading>
       <VStack mt={4} spacing={4} mx="auto" maxW="md">
         <Input

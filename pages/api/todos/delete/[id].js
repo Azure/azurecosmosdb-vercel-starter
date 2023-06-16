@@ -1,8 +1,11 @@
 // api/deleteTodo.js
-import { container } from "../../../../lib/cosmos";
+import cosmosSingleton from "../../../../lib/cosmos";
 
 export default async function handler(req, res) {
   if (req.method === "DELETE") {
+    await cosmosSingleton.initialize();
+    const container = cosmosSingleton.getContainer();
+
     const { id } = req.query;
 
     const { resource: existingTodo } = await container.item(id, id).read();
